@@ -1,0 +1,41 @@
+.footer-sections li {
+    background-color: rgb(98, 96, 94);
+}
+
+.q-links{
+
+  ul li a { 
+    text-decoration: none;
+  }
+
+}
+
+.footer-copy-sec{
+  display: flex;
+  justify-content: space-around;
+
+  p {
+    font-size: 13px;
+  }
+
+  .footer-privacy-sec {
+    
+    ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin: 0 10px;
+        font-size: 13px;
+
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+  

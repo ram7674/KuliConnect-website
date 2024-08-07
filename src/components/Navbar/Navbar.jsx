@@ -7,7 +7,7 @@ const UserSign = [
     path: "/login"
   },
   {
-    name: "Sign up",
+    name: "Sign Up",
     path: "/signup"
   },
 ];
@@ -17,9 +17,9 @@ const Navbar = () => {
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light p-2 sticky-top">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="#">
             KuliConnect
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -29,7 +29,7 @@ const Navbar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav m-auto mb-2 mb-lg-0">
@@ -49,29 +49,26 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="nav-item fw-bold me-3">
-                <a className="nav-link" aria-current="page" href="#section4">
+                <Link className="nav-link" aria-current="page" to="/slider">
                   Dashboard
-                </a>
+                </Link>
               </li>
             </ul>
-            <form className="d-flex">
+            <div className="d-flex">
               {
-                UserSign.map((item, index) => {
-                  return (
-                    <Link to={item.path}>
-                      <button
-                        key={index}
-                        className="btn text-white font-bold me-4"
-                        type="submit"
-                        style={{ backgroundColor: index % 2 === 0 ? 'red' : 'blue' }}
-                      >
-                        {item.name}
-                      </button>
-                    </Link>
-                  );
-                })
+                UserSign.map((item, index) => (
+                  <Link key={index} to={item.path}>
+                    <button
+                      className="btn text-white font-bold me-4"
+                      type="button"
+                      style={{ backgroundColor: index % 2 === 0 ? 'red' : 'blue' }}
+                    >
+                      {item.name}
+                    </button>
+                  </Link>
+                ))
               }
-            </form>
+            </div>
           </div>
         </div>
       </nav>
