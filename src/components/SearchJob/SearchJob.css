@@ -1,0 +1,39 @@
+.profile-pic{
+    height: 50px;
+    width: 50px;
+    background-color: aqua;
+    border-radius: 50px;
+    margin-right: 15px;
+}
+
+.search-input-container {
+    position: relative;
+    width: 40%;
+}
+  
+.search-input {
+    width: 100%;
+    height: 40px;
+    padding: 15px 30px 15px 15px;
+    border-radius: 10px;
+    border: 1px solid rgb(175, 175, 175);
+    font-size: 16px;
+}
+  
+.search-icon-st {
+    position: absolute;
+    top: 50%;
+    right: 10px; 
+    transform: translateY(-50%);
+    font-size: 17px;
+    color: #aaa;
+}
+
+.search-input:focus{
+    outline: none;
+}
+
+
+
+
+

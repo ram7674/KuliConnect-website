@@ -49,7 +49,7 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="nav-item fw-bold me-3">
-                <Link className="nav-link" aria-current="page" to="/slider">
+                <Link className="nav-link" aria-current="page" to="searchjob">
                   Dashboard
                 </Link>
               </li>
